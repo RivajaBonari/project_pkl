@@ -12,7 +12,7 @@
             <ul class="navbar-nav mr-lg-2">
                 <li class="nav-item nav-search d-none d-lg-block">
                     <div class="input-group">
-                        @if (session('success'))
+                        @if (session('success')) 
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 {{ session('success') }}
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Tutup">
