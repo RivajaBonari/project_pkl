@@ -12,7 +12,7 @@
             <ul class="navbar-nav mr-lg-2">
                 <li class="nav-item nav-search d-none d-lg-block">
                     <div class="input-group">
-                        @if (session('success')) 
+                        @if (session('success'))
                             <div class="alert alert-success alert-dismissible fade show" role="alert">
                                 {{ session('success') }}
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Tutup">
@@ -75,8 +75,13 @@
                     </div>
                 </li>
                 <li class="nav-item nav-profile dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                        {{-- <i class="ti-user mx-0 fs-1" alt="profile"></i> --}}
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" data-toggle="dropdown"
+                        id="profileDropdown">
+                        {{-- Nama user --}}
+                        <span class="mr-2 d-none d-lg-inline text-black small">
+                            {{ Auth::user()->nama }}
+                        </span>
+                        {{-- Icon user --}}
                         <i class="ti-user mx-0" style="font-size: 22px;" alt="profile"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
@@ -92,9 +97,9 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                             @csrf
                         </form>
-
                     </div>
                 </li>
+
             </ul>
             <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
                 data-toggle="offcanvas">

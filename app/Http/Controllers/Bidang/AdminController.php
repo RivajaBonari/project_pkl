@@ -56,15 +56,25 @@ class AdminController extends Controller
             'asal_surat'    => $request->asal_surat,
             'perihal'       => $request->perihal,
             'file_surat'    => $fileName,
+            'no_agenda'     => $request->no_agenda,
+            'klasifikasi'   => $request->klasifikasi,
+            'sifat'         => $request->sifat,
             'created_by'    => Auth::id(),
+            'status_disposisi' => 'Belum',
         ]);
 
         return redirect()->route('admin.input_surat')->with('success', 'Surat berhasil ditambahkan!');
     }
 
+
     public function dataSuratMasuk()
     {
         $surats = SuratMasuk::latest()->get();
         return view('admin.dataSuratMasuk', compact('surats'));
+    }
+    public function show($id)
+    {
+        $surat = SuratMasuk::findOrFail($id);
+        return view('admin.detail_surat', compact('surat'));
     }
 }

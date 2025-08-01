@@ -40,6 +40,7 @@ Route::middleware(['auth', 'role:Admin'])->group(function () {
     Route::get('/admin/dataSuratMasuk', [AdminController::class, 'data_surat'])->name('admin.dataSuratMasuk');
     Route::get('/admin/dataSuratMasuk', [AdminController::class, 'dataSuratMasuk'])->name('admin.dataSuratMasuk');
     Route::post('/admin/suratmasuk/store', [AdminController::class, 'store'])->name('admin.suratmasuk.store');
+    Route::get('/admin/suratmasuk/{id}/detail', [AdminController::class, 'show'])->name('admin.suratmasuk.detail');
 
 });
 

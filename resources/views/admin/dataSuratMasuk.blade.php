@@ -3,28 +3,33 @@
     <div class="col-lg-10 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Data Surat Masuk</h4>
-                <p class="card-description">List seluruh surat yang masuk</p>
-                <div class="table-responsive">
-                    <div class="d-flex justify-content-end mb-3">
-                        {{-- <div class="input-group" style="width: 300px;">
-                            <input type="text" class="form-control" placeholder="Cari surat..." id="searchInput">
-                            <span class="input-group-text" id="search">
-                                <i class="icon-search"></i>
-                            </span>
-                        </div> --}}
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div>
+                        <h4 class="card-title">Data Surat Masuk</h4>
+                        <p class="card-description">List seluruh surat yang masuk</p>
                     </div>
+                    <div class="d-flex justify-content-end mb-3">
+                        <a href="{{ route('admin.input_surat') }}" class="btn btn-primary btn-sm">
+                            <i class="ti-plus"></i> Tambah Surat
+                        </a>
+                    </div>
+                </div>
 
+                <div class="table-responsive">
                     <table id="suratTable" class="table table-hover">
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Jenis Surat</th>
-                                <th>Nomor Surat</th>
-                                <th>Tanggal Masuk</th>
-                                <th>Asal Surat</th>
-                                <th style="width: 200px;">Perihal</th>
-                                <th>Status Disposisi</th>
+                                <th>Jenis</th>
+                                <th>No Surat</th>
+                                <th>Tgl Surat</th>
+                                <th>Tgl Masuk</th>
+                                <th>No Agenda</th>
+                                <th>Klasifikasi</th>
+                                <th>Asal</th>
+                                <th>Perihal</th>
+                                <th>Sifat</th>
+                                <th>Disposisi</th>
                                 <th>File</th>
                             </tr>
                         </thead>
@@ -34,11 +39,15 @@
                                     <td>{{ $index + 1 }}</td>
                                     <td>{{ $surat->jenis_surat }}</td>
                                     <td>{{ $surat->no_surat }}</td>
+                                    <td>{{ \Carbon\Carbon::parse($surat->tanggal_surat)->format('d M Y') }}</td>
                                     <td>{{ \Carbon\Carbon::parse($surat->tanggal_masuk)->format('d M Y') }}</td>
+                                    <td>{{ $surat->no_agenda ?? '-' }}</td>
+                                    <td>{{ $surat->klasifikasi ?? '-' }}</td>
                                     <td>{{ $surat->asal_surat }}</td>
                                     <td style="white-space: normal; word-wrap: break-word; max-width: 200px;">
                                         {{ $surat->perihal }}
                                     </td>
+                                    <td>{{ $surat->sifat ?? '-' }}</td>
                                     <td>
                                         @if ($surat->status_disposisi == 'Belum')
                                             <label class="badge badge-warning">Belum</label>
@@ -49,7 +58,7 @@
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="{{ asset('uploads/surat_masuk/' . $surat->file_surat) }}" target="_blank">
+                                        <a href="{{ route('admin.suratmasuk.detail', $surat->id) }}" target="_blank">
                                             Lihat File
                                         </a>
                                     </td>
@@ -57,8 +66,8 @@
                             @endforeach
                         </tbody>
                     </table>
-
                 </div>
+
             </div>
         </div>
     </div>

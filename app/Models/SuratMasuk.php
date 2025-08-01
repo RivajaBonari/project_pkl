@@ -12,7 +12,6 @@ class SuratMasuk extends Model
     // Nama tabel jika tidak sesuai dengan nama model
     protected $table = 'surat_masuks';
 
-    // Kolom yang bisa diisi (mass assignable)
     protected $fillable = [
         'jenis_surat',
         'no_surat',
@@ -21,9 +20,13 @@ class SuratMasuk extends Model
         'asal_surat',
         'perihal',
         'file_surat',
+        'no_agenda',
+        'klasifikasi',
+        'sifat',
         'created_by',
         'status_disposisi',
     ];
+
 
 
     // Relasi ke user yang membuat surat
