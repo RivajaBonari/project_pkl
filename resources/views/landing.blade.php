@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SIMAK BKAD DAIRI - Sistem Informasi Manajemen Surat</title>
+    <title>SIMAK - BKAD DAIRI</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="shortcut icon" href="{{ asset('assets/images/logoDairi.png') }}" />
     <style>
         :root {
             --primary-color: #4688ce;
@@ -206,7 +207,8 @@
                         Manajemen Surat Lebih <span style="color: #f1c40f;">Efisien</span>
                     </h1>
                     <p class="mb-4" style="color: #ccc;">
-                        SIMAK (Sistem Informasi Manajemen Arsip & Korespondensi) BKAD Dairi hadir untuk mengelola surat masuk dan keluar
+                        SIMAK (Sistem Informasi Manajemen Arsip & Korespondensi) BKAD Dairi hadir untuk mengelola surat
+                        masuk dan keluar
                         dengan lebih cepat, terstruktur, dan transparan.
                     </p>
                     <a href="{{ route('login') }}" class="btn btn-light px-4 py-2 fw-bold"
@@ -221,8 +223,8 @@
                         <div
                             style="position: absolute; top: -20px; left: -20px; width: 120%; height: 120%; border: 2px dashed #f1c40f; border-radius: 50%; animation: rotate 20s linear infinite;">
                         </div>
-                        <img src="{{ asset('assets/images/bkad1.webp') }}" alt="Ilustrasi Surat"
-                            class="img-fluid rounded" style="max-height: 360px; position: relative; z-index: 2;">
+                        <img src="{{ asset('assets/images/bg1.png') }}" alt="Ilustrasi Surat" class="img-fluid rounded"
+                            style="max-height: 360px; position: relative; z-index: 2;">
                     </div>
                 </div>
             </div>
@@ -293,10 +295,6 @@
                                     alt="Kantor BKAD Dairi">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{ asset('assets/images/bkad1.webp') }}" class="d-block w-100 img-fluid"
-                                    alt="Gedung BKAD">
-                            </div>
-                            <div class="carousel-item">
                                 <img src="{{ asset('assets/images/bkad2.webp') }}" class="d-block w-100 img-fluid"
                                     alt="Staf BKAD">
                             </div>
@@ -308,7 +306,8 @@
                 <!-- Teks -->
                 <div class="col-lg-6 ps-lg-4" data-aos="fade-left">
                     <h2 class="mb-4">Tentang SIMAK BKAD Dairi</h2>
-                    <p>Sistem Informasi Manajemen Arsip & Korespondensi (SIMAK) adalah solusi digital untuk meningkatkan efisiensi dan
+                    <p>Sistem Informasi Manajemen Arsip & Korespondensi (SIMAK) adalah solusi digital untuk meningkatkan
+                        efisiensi dan
                         transparansi dalam pengelolaan tata naskah dinas di lingkungan Badan Keuangan dan Aset Daerah
                         (BKAD) Kabupaten Dairi. Dengan SIMAK, proses surat-menyurat menjadi lebih cepat, akurat, dan
                         terintegrasi.</p>
@@ -319,7 +318,6 @@
         </div>
     </section>
 
-
     <footer class="py-5" style="background: linear-gradient(135deg, #7d9cca, #405980); color: #f8f9fa;">
         <div class="container" style="max-width: 1140px;">
             <div class="row text-center text-md-start align-items-start">
@@ -328,15 +326,15 @@
                 <div class="col-md-4 mb-4">
                     <h5 class="fw-bold mb-3"> Hubungi Kami</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2">
-                            <i class="bi bi-whatsapp me-2 text-success fs-5"></i>
+                        <li class="mb-2 d-flex align-items-center">
+                            <img src="/assets/images/whatsapp.png" alt="WhatsApp" width="24" class="me-2">
                             <a href="https://web.whatsapp.com/" target="_blank"
                                 class="text-light text-decoration-none">
                                 +628136464747
                             </a>
                         </li>
-                        <li>
-                            <i class="bi bi-envelope-fill me-2 fs-5"></i>
+                        <li class="d-flex align-items-center">
+                            <img src="/assets/images/gmail.png" alt="Email" width="24" class="me-2">
                             <a href="mailto:cthemail@kemendagri.go.id" target="_blank"
                                 class="text-light text-decoration-none">
                                 cthemail@kemendagri.go.id
@@ -349,37 +347,32 @@
                 <div class="col-md-4 mb-4 text-center">
                     <h5 class="fw-bold mb-3"> Alamat Kantor</h5>
                     <p class="mb-2 text-center">
-                        Jl. Sisingamangaraja No.127,Kota Sidikalang, Kec. Sidikalang,Kabupaten Dairi, Sumatera Utara
+                        Jl. Sisingamangaraja No.127, Kota Sidikalang, Kec. Sidikalang,Kabupaten Dairi, Sumatera
+                        Utara
                         22218
                     </p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.2320167454254!2d98.3115856735954!3d2.747477097229727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303037e159f9aba1%3A0x3bf718031e5ced86!2sBadan%20Keuangan%20dan%20Aset%20Daerah%20(BKAD)%20Kabupaten%20Dairi!5e0!3m2!1sid!2sid!4v1754293414849!5m2!1sid!2sid"
+                        width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
                 <!-- Media Sosial -->
                 <div class="col-md-4 mb-4 text-md-end">
                     <h5 class="fw-bold mb-3">Media Sosial Kami</h5>
-                    <ul class="list-unstyled">
-                        <li class="mb-3">
+                    <ul class="list-unstyled text-center">
+                        <li class="mb-3 d-flex justify-content-md-end align-items-center">
+                            <img src="/assets/images/instagram.png" alt="Instagram" width="30" class="me-2">
                             <a href="https://www.instagram.com/bkad_kabdairi/" target="_blank"
-                                class="text-decoration-none d-inline-flex align-items-center text-light"
-                                style="transition: background-color 0.3s ease;">
-                                <span
-                                    class="d-inline-flex justify-content-center align-items-center rounded-circle shadow-sm me-2"
-                                    style="width: 35px; height: 35px; background-color: white;">
-                                    <i class="bi bi-instagram text-danger fs-5"></i>
-                                </span>
-                                <span>@bkad_kabdairi</span>
+                                class="text-light text-decoration-none">
+                                @bkad_kabdairi
                             </a>
                         </li>
-                        <li>
+                        <li class="d-flex justify-content-md-end align-items-center">
+                            <img src="/assets/images/facebook.png" alt="Facebook" width="30" class="me-2">
                             <a href="https://www.facebook.com/profile.php?id=61576860890036" target="_blank"
-                                class="text-decoration-none d-inline-flex align-items-center text-light"
-                                style="transition: background-color 0.3s ease;">
-                                <span
-                                    class="d-inline-flex justify-content-center align-items-center rounded-circle shadow-sm me-2"
-                                    style="width: 35px; height: 35px; background-color: white;">
-                                    <i class="bi bi-facebook text-primary fs-5"></i>
-                                </span>
-                                <span>bkad_kabdairi</span>
+                                class="text-light text-decoration-none">
+                                bkad_kabdairi
                             </a>
                         </li>
                     </ul>
@@ -393,12 +386,10 @@
             style="background: linear-gradient(90deg, #5c7db8, #2e3e5f); font-size: 1.1rem; z-index: 999;">
             <small class="d-inline-block">
                 <i class="bi bi-c-circle me-1 text-white"></i>
-                2025 <span style="letter-spacing: 0.5px;">SIMAK – Kantor BKAD Kabupaten Dairi</span>
+                2025 <span style="letter-spacing: 0.5px;">SIMAK – Kantor BKAD Kabupaten Dairi </span>
             </small>
         </div>
     </footer>
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
