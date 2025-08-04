@@ -118,7 +118,20 @@
             }
         }, 2000);
     </script>
-
+    <script>
+        // Ketika baris diklik, arahkan ke link detail surat
+        document.addEventListener("DOMContentLoaded", function() {
+            const rows = document.querySelectorAll(".clickable-row");
+            rows.forEach(row => {
+                row.addEventListener("click", function() {
+                    const url = this.getAttribute("data-href");
+                    if (url) {
+                        window.location.href = url;
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 

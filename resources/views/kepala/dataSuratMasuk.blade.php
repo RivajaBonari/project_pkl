@@ -1,4 +1,4 @@
-@extends('admin.template')
+@extends('kepala.template')
 @section('content')
     <div class="col-lg-10 grid-margin stretch-card">
         <div class="card">
@@ -7,11 +7,6 @@
                     <div>
                         <h4 class="card-title">Data Surat Masuk</h4>
                         <p class="card-description">List seluruh surat yang masuk</p>
-                    </div>
-                    <div class="d-flex justify-content-end mb-3">
-                        <a href="{{ route('admin.input_surat') }}" class="btn btn-primary btn-sm">
-                            <i class="ti-plus"></i> Tambah Surat
-                        </a>
                     </div>
                 </div>
 
@@ -34,7 +29,7 @@
                         </thead>
                         <tbody>
                             @foreach ($surats as $index => $surat)
-                                <tr class="clickable-row" data-href="{{ route('admin.suratmasuk.detail', $surat->id) }}" style="cursor: pointer;" title="Klik untuk melihat ringkasannya!">
+                                <tr class="clickable-row" data-href="{{ route('kepala.suratmasuk.detail', $surat->id) }}" style="cursor: pointer;" title="Klik untuk memberi disposisi!">
                                     <td>{{ $index + 1 }}</td>
                                     <td>{{ $surat->jenis_surat }}</td>
                                     <td>{{ $surat->no_surat }}</td>
@@ -61,7 +56,6 @@
                         </tbody>
                     </table>
                 </div>
-
             </div>
         </div>
     </div>

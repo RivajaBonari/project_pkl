@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('disposisis', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('surat_id')->constrained('surat_masuks');
-            $table->foreignId('dari_id')->constrained('users');
-            $table->foreignId('kepada_bidang')->constrained('bidangs');
+            $table->foreignId('surat_id')->constrained('surat_masuks')->onDelete('cascade');
+            $table->foreignId('dari_id')->constrained('users')->onDelete('cascade');
+            $table->text('kepada_bidang'); // Menggunakan text untuk menyimpan array bidang (hasil implode)
             $table->text('isi_disposisi');
             $table->date('tanggal');
             $table->timestamps();

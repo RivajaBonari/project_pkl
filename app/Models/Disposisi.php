@@ -18,4 +18,11 @@ class Disposisi extends Model
     {
         return $this->belongsTo(Bidang::class, 'kepada_bidang');
     }
+    protected $fillable = [
+        'surat_id',
+        'dari_id',
+        'kepada_bidang',
+        'isi_disposisi',
+        'tanggal',
+    ];
 }

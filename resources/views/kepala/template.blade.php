@@ -20,6 +20,17 @@
     <link rel="stylesheet" href="{{ asset('assets/css/vertical-layout-light/style.css') }}">
     <!-- endinject -->
     <link rel="shortcut icon" href="{{ asset('assets/images/logoDairi.png') }}" />
+    <!-- Tambahkan di <head> -->
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/css/tom-select.css" rel="stylesheet">
+    <style>
+        .table td {
+            white-space: normal !important;
+            word-wrap: break-word;
+        }
+    </style>
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+
 </head>
 
 <body>
@@ -32,9 +43,9 @@
         <div class="container-fluid page-body-wrapper">
 
             {{-- BAGIAN SIDEBAR --}}
-            @include('kaban.sidebar')
+            @include('kepala.sidebar')
             {{-- @include('layout.template') --}}
-            
+
             @yield('content')
 
         </div>
@@ -48,6 +59,7 @@
     <script src="{{ asset('assets/vendors/datatables.net/jquery.dataTables.js') }}"></script>
     <script src="{{ asset('assets/vendors/datatables.net-bs4/dataTables.bootstrap4.js') }}"></script>
     <script src="{{ asset('assets/js/dataTables.select.min.js') }}"></script>
+    <script src="{{ asset('assets/js/file-upload.js') }}"></script>
 
     <!-- End plugin js for this page -->
     <!-- inject:js -->
@@ -61,6 +73,66 @@
     <script src="{{ asset('assets/js/dashboard.js') }}"></script>
     <script src="PPasset('assets/js/Chart.roundedBarCharts.js')"></script>
     <!-- End custom js for this page-->
+    <!-- Tambahkan sebelum </body> -->
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>
+    <script>
+        new TomSelect("#jenis_surat", {
+            create: false,
+            sortField: {
+                field: "text",
+                direction: "asc"
+            }
+        });
+    </script>
+
+    <!-- JQuery & DataTables JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#suratTable').DataTable({
+                language: {
+                    search: "_INPUT_",
+                    searchPlaceholder: "Cari surat...",
+                    lengthMenu: "Tampilkan _MENU_ entri",
+                    zeroRecords: "Data tidak ditemukan",
+                    info: "Menampilkan _START_ sampai _END_ dari _TOTAL_ entri",
+                    infoEmpty: "Data kosong",
+                    paginate: {
+                        previous: "Sebelumnya",
+                        next: "Berikutnya"
+                    }
+                }
+            });
+        });
+    </script>
+    <script>
+        // Tunggu 2 detik (2000ms), lalu sembunyikan alert-nya
+        setTimeout(function() {
+            let alert = document.querySelector('.alert');
+            if (alert) {
+                alert.classList.remove('show');
+                alert.classList.add('fade');
+                setTimeout(() => alert.remove(), 500); // Hapus dari DOM setelah fade
+            }
+        }, 2000);
+    </script>
+    <script>
+        // Ketika baris diklik, arahkan ke link detail surat
+        document.addEventListener("DOMContentLoaded", function() {
+            const rows = document.querySelectorAll(".clickable-row");
+            rows.forEach(row => {
+                row.addEventListener("click", function() {
+                    const url = this.getAttribute("data-href");
+                    if (url) {
+                        window.location.href = url;
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>

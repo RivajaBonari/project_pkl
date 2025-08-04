@@ -202,7 +202,6 @@
             <div class="row align-items-center">
                 <!-- Konten Teks -->
                 <div class="col-lg-6 text-center text-lg-start">
-                    <p class="text-uppercase mb-2" style="letter-spacing: 1px; color: #999;">#startsuratnow</p>
                     <h1 class="fw-bold mb-4" style="font-size: 2.8rem; color: #fff;">
                         Manajemen Surat Lebih <span style="color: #f1c40f;">Efisien</span>
                     </h1>
