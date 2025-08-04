@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Bidang\AdminController;
 use App\Http\Controllers\Bidang\KepalaController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DisposisiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,6 +44,8 @@ Route::middleware(['auth', 'role:Admin'])->group(function () {
     Route::get('/admin/dataSuratMasuk', [AdminController::class, 'dataSuratMasuk'])->name('admin.dataSuratMasuk');
     Route::post('/admin/suratmasuk/store', [AdminController::class, 'store'])->name('admin.suratmasuk.store');
     Route::get('/admin/suratmasuk/{id}/detail', [AdminController::class, 'show'])->name('admin.suratmasuk.detail');
+    Route::get('/admin/disposisi', [DisposisiController::class, 'index'])->name('admin.suratmasuk.disposisi');
+    Route::get('/admin/disposisi/detail/{id}', [DisposisiController::class, 'detail'])->name('admin.disposisi.detail');
 });
 
 
@@ -51,7 +54,7 @@ Route::middleware(['auth', 'role:Kepala Badan'])->group(function () {
     Route::get('/kepala/dashboard', fn() => view('kepala.dashboard'))->name('kepala.dashboard');
     Route::get('/kepala/dataSuratMasuk', [KepalaController::class, 'dataSuratMasuk'])->name('kepala.dataSuratMasuk');
     Route::get('/kepala/suratmasuk/{id}/detail', [KepalaController::class, 'show'])->name('kepala.suratmasuk.detail');
-    Route::post('/kepala/disposisi/simpan', [KepalaController::class, 'store'])->name('kepala.suratmasuk.disposisi');
+    Route::post('/kepala/disposisi/simpan', [DisposisiController::class, 'store'])->name('kepala.suratmasuk.disposisi');
 
 });
 

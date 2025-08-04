@@ -206,7 +206,8 @@
                         Manajemen Surat Lebih <span style="color: #f1c40f;">Efisien</span>
                     </h1>
                     <p class="mb-4" style="color: #ccc;">
-                        SIMAK (Sistem Informasi Manajemen Arsip & Korespondensi) BKAD Dairi hadir untuk mengelola surat masuk dan keluar
+                        SIMAK (Sistem Informasi Manajemen Arsip & Korespondensi) BKAD Dairi hadir untuk mengelola surat
+                        masuk dan keluar
                         dengan lebih cepat, terstruktur, dan transparan.
                     </p>
                     <a href="{{ route('login') }}" class="btn btn-light px-4 py-2 fw-bold"
@@ -308,7 +309,8 @@
                 <!-- Teks -->
                 <div class="col-lg-6 ps-lg-4" data-aos="fade-left">
                     <h2 class="mb-4">Tentang SIMAK BKAD Dairi</h2>
-                    <p>Sistem Informasi Manajemen Arsip & Korespondensi (SIMAK) adalah solusi digital untuk meningkatkan efisiensi dan
+                    <p>Sistem Informasi Manajemen Arsip & Korespondensi (SIMAK) adalah solusi digital untuk meningkatkan
+                        efisiensi dan
                         transparansi dalam pengelolaan tata naskah dinas di lingkungan Badan Keuangan dan Aset Daerah
                         (BKAD) Kabupaten Dairi. Dengan SIMAK, proses surat-menyurat menjadi lebih cepat, akurat, dan
                         terintegrasi.</p>
@@ -318,6 +320,7 @@
             </div>
         </div>
     </section>
+
 
 
     <footer class="py-5" style="background: linear-gradient(135deg, #7d9cca, #405980); color: #f8f9fa;">

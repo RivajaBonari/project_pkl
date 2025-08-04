@@ -20,7 +20,7 @@
                     <li class="nav-item"> <a class="nav-link" href="{{ route('admin.dataSuratMasuk') }}">Data Surat
                             Masuk</a></li>
                     <li class="nav-item"> <a class="nav-link"
-                            href="{{ asset('assets/pages/ui-features/dropdowns.html') }}">Disposisi Masuk</a></li>
+                            href="{{ route('admin.suratmasuk.disposisi') }}">Disposisi Masuk</a></li>
                 </ul>
             </div>
         </li>
