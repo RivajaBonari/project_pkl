@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Bidang;
 
 use App\Http\Controllers\Controller;
 use App\Models\SuratMasuk;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -76,5 +77,17 @@ class AdminController extends Controller
     {
         $surat = SuratMasuk::findOrFail($id);
         return view('admin.detail_surat', compact('surat'));
+    }
+    public function showUser()
+    {
+        $users = User::all();
+        return view('admin.users', compact('users'));
+    }
+    public function destroy($id)
+    {
+        $user = User::findOrFail($id);
+        $user->delete();
+
+        return redirect()->back()->with('success', 'Pengguna berhasil dihapus.');
     }
 }

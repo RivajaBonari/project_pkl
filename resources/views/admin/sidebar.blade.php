@@ -62,7 +62,7 @@
             <div class="collapse" id="charts">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link"
-                            href="{{ asset('assets/pages/charts/chartjs.html') }}">Data Pengguna</a></li>
+                            href="{{ route('admin.users.index') }}">Data Pengguna</a></li>
                 </ul>
             </div>
         </li>

@@ -39,6 +39,7 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 // === Admin ===
 Route::middleware(['auth', 'role:Admin'])->group(function () {
     Route::get('/admin/dashboard', fn() => view('admin.dashboard'))->name('admin.dashboard');
+    Route::get('/admin/users', [AdminController::class, 'showUser'])->name('admin.users.index');
     Route::get('/admin/suratMasuk', [AdminController::class, 'surat_masuk'])->name('admin.input_surat');
     Route::get('/admin/dataSuratMasuk', [AdminController::class, 'data_surat'])->name('admin.dataSuratMasuk');
     Route::get('/admin/dataSuratMasuk', [AdminController::class, 'dataSuratMasuk'])->name('admin.dataSuratMasuk');
@@ -46,6 +47,7 @@ Route::middleware(['auth', 'role:Admin'])->group(function () {
     Route::get('/admin/suratmasuk/{id}/detail', [AdminController::class, 'show'])->name('admin.suratmasuk.detail');
     Route::get('/admin/disposisi', [DisposisiController::class, 'index'])->name('admin.suratmasuk.disposisi');
     Route::get('/admin/disposisi/detail/{id}', [DisposisiController::class, 'detail'])->name('admin.disposisi.detail');
+    Route::delete('/admin/user/{id}', [AdminController::class, 'destroy'])->name('admin.user.destroy');
 });
 
 
