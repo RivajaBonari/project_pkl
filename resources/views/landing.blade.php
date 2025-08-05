@@ -365,7 +365,7 @@
                     Sidikalang, Kab. Dairi, Sumatera Utara 22218
                 </p>
                 <div class="mt-3">
-                    <h6 class="fw-bold">Media Sosial</h6>
+                    <h6 class="fw-bold">Media Sosial</h6> 
                     <a href="https://www.instagram.com/bkad_kabdairi/" target="_blank" class="me-3 text-light">
                         <i class="bi bi-instagram fs-5 text-danger"></i>
                     </a>
@@ -381,7 +381,7 @@
     <div class=" fixed-bottom text-center py-3 mt-2" style="background: linear-gradient(to right, #314e75, #1d2b47);">
         <small class="text-white fw-semibold">
             <i class="bi bi-c-circle me-1"></i>
-            2025 SIMAK – Kantor BKAD Kabupaten Dairi
+            2025 SIMAK Kantor BKAD Kabupaten Dairi
         </small>
     </div>
 </footer>
