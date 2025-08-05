@@ -9,6 +9,11 @@
                         <h4 class="card-title">Data Pengguna</h4>
                         <p class="card-description">List seluruh pengguna yang terdaftar</p>
                     </div>
+                    <div class="d-flex justify-content-end mb-3">
+                        <a href="{{ route('admin.tambahPengguna') }}" class="btn btn-primary btn-sm">
+                            <i class="ti-plus"></i> Tambah Pengguna
+                        </a>
+                    </div>
                 </div>
 
                 <div class="table-responsive">
@@ -34,13 +39,15 @@
 
                                     <td>{{ \Carbon\Carbon::parse($user->created_at)->format('d M Y') }}</td>
                                     <td>
-                                        <form action="{{ route('admin.user.destroy', $user->id) }}" method="POST"
-                                            onsubmit="return confirm('Yakin ingin menghapus pengguna ini?');">
+                                        <form action="{{ route('admin.user.toggleStatus', $user->id) }}" method="POST"
+                                            onsubmit="return confirm('Yakin ingin mengubah status pengguna ini?');">
                                             @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-sm btn-danger">
-                                                <i class="ti-trash" title="Hapus data pengguna"></i> Hapus
-                                            </button>
+                                            @method('PATCH')
+                                            @if ($user->is_active)
+                                                <button class="btn btn-sm btn-warning">Nonaktifkan</button>
+                                            @else
+                                                <button class="btn btn-sm btn-success">Aktifkan</button>
+                                            @endif
                                         </form>
                                     </td>
                                 </tr>

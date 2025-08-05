@@ -7,6 +7,7 @@ use App\Http\Controllers\Bidang\AdminController;
 use App\Http\Controllers\Bidang\KepalaController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DisposisiController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,8 +28,8 @@ Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.proses');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('register');
-Route::post('/register', [RegisterController::class, 'register'])->name('register.store');
+// Route::get('/register', [RegisterController::class, 'showRegisterForm'])->name('register');
+// Route::post('/register', [RegisterController::class, 'register'])->name('register.store');
 
 /*
 |--------------------------------------------------------------------------
@@ -39,7 +40,6 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 // === Admin ===
 Route::middleware(['auth', 'role:Admin'])->group(function () {
     Route::get('/admin/dashboard', fn() => view('admin.dashboard'))->name('admin.dashboard');
-    Route::get('/admin/users', [AdminController::class, 'showUser'])->name('admin.users.index');
     Route::get('/admin/suratMasuk', [AdminController::class, 'surat_masuk'])->name('admin.input_surat');
     Route::get('/admin/dataSuratMasuk', [AdminController::class, 'data_surat'])->name('admin.dataSuratMasuk');
     Route::get('/admin/dataSuratMasuk', [AdminController::class, 'dataSuratMasuk'])->name('admin.dataSuratMasuk');
@@ -47,7 +47,15 @@ Route::middleware(['auth', 'role:Admin'])->group(function () {
     Route::get('/admin/suratmasuk/{id}/detail', [AdminController::class, 'show'])->name('admin.suratmasuk.detail');
     Route::get('/admin/disposisi', [DisposisiController::class, 'index'])->name('admin.suratmasuk.disposisi');
     Route::get('/admin/disposisi/detail/{id}', [DisposisiController::class, 'detail'])->name('admin.disposisi.detail');
-    Route::delete('/admin/user/{id}', [AdminController::class, 'destroy'])->name('admin.user.destroy');
+    Route::get('/admin/users', [AdminController::class, 'showUser'])->name('admin.users.index');
+    Route::delete('/admin/user/{id}', [UsersController::class, 'destroy'])->name('admin.user.destroy');
+    // Tampilkan form tambah user
+    Route::get('/admin/tambahUser', [UsersController::class, 'index'])->name('admin.tambahPengguna');
+
+    // Simpan data user baru (POST)
+    Route::post('/admin/tambahUser', [UsersController::class, 'store'])->name('admin.user.store');
+    Route::patch('/admin/user/{id}/toggle', [UsersController::class, 'toggleStatus'])->name('admin.user.toggleStatus');
+
 });
 
 
@@ -57,7 +65,6 @@ Route::middleware(['auth', 'role:Kepala Badan'])->group(function () {
     Route::get('/kepala/dataSuratMasuk', [KepalaController::class, 'dataSuratMasuk'])->name('kepala.dataSuratMasuk');
     Route::get('/kepala/suratmasuk/{id}/detail', [KepalaController::class, 'show'])->name('kepala.suratmasuk.detail');
     Route::post('/kepala/disposisi/simpan', [DisposisiController::class, 'store'])->name('kepala.suratmasuk.disposisi');
-
 });
 
 // === Bidang Aset ===

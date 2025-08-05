@@ -63,6 +63,8 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link"
                             href="{{ route('admin.users.index') }}">Data Pengguna</a></li>
+                    <li class="nav-item"> <a class="nav-link"
+                            href="{{ route('admin.tambahPengguna') }}">Tambah Pengguna</a></li>
                 </ul>
             </div>
         </li>

@@ -21,6 +21,14 @@ class LoginController extends Controller
             'password' => 'required',
         ]);
 
+        $user = \App\Models\User::where('email', $request->email)->first();
+
+        // ✅ Cek apakah user ditemukan dan aktif
+        if (!$user || !$user->is_active) {
+            return back()->with('error', 'Akun tidak aktif atau tidak ditemukan.');
+        }
+
+        // Cek kredensial
         if (Auth::attempt($credentials, $request->filled('remember'))) {
             $request->session()->regenerate();
 
@@ -46,6 +54,7 @@ class LoginController extends Controller
 
         return back()->with('error', 'Email atau password salah.');
     }
+
 
     public function logout(Request $request)
     {
