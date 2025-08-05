@@ -320,11 +320,12 @@
 
     <footer class="py-5" style="background: linear-gradient(135deg, #7d9cca, #405980); color: #f8f9fa;">
         <div class="container" style="max-width: 1140px;">
-            <div class="row text-center text-md-start align-items-start">
+            <div class="row align-items-start justify-content-between">
 
                 <!-- Hubungi Kami -->
-                <div class="col-md-4 mb-4">
-                    <h5 class="fw-bold mb-3"> Hubungi Kami</h5>
+                <div class="col-md-3 mb-4 d-flex flex-column justify-content-start"
+                    style="transform: translateX(-10px);">
+                    <h5 class="fw-bold mb-3">Hubungi Kami</h5>
                     <ul class="list-unstyled">
                         <li class="mb-2 d-flex align-items-center">
                             <img src="/assets/images/whatsapp.png" alt="WhatsApp" width="24" class="me-2">
@@ -344,31 +345,39 @@
                 </div>
 
                 <!-- Alamat Kantor -->
-                <div class="col-md-4 mb-4 text-center">
-                    <h5 class="fw-bold mb-3"> Alamat Kantor</h5>
-                    <p class="mb-2 text-center">
-                        Jl. Sisingamangaraja No.127, Kota Sidikalang, Kec. Sidikalang,Kabupaten Dairi, Sumatera
-                        Utara
-                        22218
-                    </p>
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.2320167454254!2d98.3115856735954!3d2.747477097229727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303037e159f9aba1%3A0x3bf718031e5ced86!2sBadan%20Keuangan%20dan%20Aset%20Daerah%20(BKAD)%20Kabupaten%20Dairi!5e0!3m2!1sid!2sid!4v1754293414849!5m2!1sid!2sid"
-                        width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="col-md-5 mb-4 text-center">
+                    <h5 class="fw-bold mb-3">Alamat Kantor</h5>
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3">
+                        <!-- Peta -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.2320167454254!2d98.3115856735954!3d2.747477097229727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303037e159f9aba1%3A0x3bf718031e5ced86!2sBadan%20Keuangan%20dan%20Aset%20Daerah%20(BKAD)%20Kabupaten%20Dairi!5e0!3m2!1sid!2sid!4v1754293414849!5m2!1sid!2sid"
+                            width="150" height="150" style="border:0; border-radius: 10px;" allowfullscreen=""
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+
+                        <!-- Teks Alamat -->
+                        <div style="max-width: 280px;">
+                            <p class="mb-0 text-start" style="line-height: 1.6;">
+                                Jl. Sisingamangaraja No.127, Kec. Sidikalang,<br>
+                                Kabupaten Dairi, Sumatera Utara 22218
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Media Sosial -->
-                <div class="col-md-4 mb-4 text-md-end">
+                <div class="col-md-3 mb-4 d-flex flex-column justify-content-start"
+                    style="transform: translateX(-10px);">
                     <h5 class="fw-bold mb-3">Media Sosial Kami</h5>
-                    <ul class="list-unstyled text-center">
-                        <li class="mb-3 d-flex justify-content-md-end align-items-center">
+                    <ul class="list-unstyled">
+                        <li class="mb-2 d-flex align-items-center">
                             <img src="/assets/images/instagram.png" alt="Instagram" width="30" class="me-2">
                             <a href="https://www.instagram.com/bkad_kabdairi/" target="_blank"
                                 class="text-light text-decoration-none">
                                 @bkad_kabdairi
                             </a>
                         </li>
-                        <li class="d-flex justify-content-md-end align-items-center">
+                        <li class="d-flex align-items-center">
                             <img src="/assets/images/facebook.png" alt="Facebook" width="30" class="me-2">
                             <a href="https://www.facebook.com/profile.php?id=61576860890036" target="_blank"
                                 class="text-light text-decoration-none">
@@ -378,19 +387,15 @@
                     </ul>
                 </div>
 
-            </div>
-        </div>
-
-        <!-- Footer bawah -->
-        <div class="fixed-bottom text-center py-3 shadow-lg text-white fw-bold"
-            style="background: linear-gradient(90deg, #5c7db8, #2e3e5f); font-size: 1.1rem; z-index: 999;">
-            <small class="d-inline-block">
-                <i class="bi bi-c-circle me-1 text-white"></i>
-                2025 <span style="letter-spacing: 0.5px;">SIMAK – Kantor BKAD Kabupaten Dairi </span>
-            </small>
-        </div>
+                <!-- Footer bawah -->
+                <div class="fixed-bottom text-center py-3 shadow-lg text-white fw-bold"
+                    style="background: linear-gradient(90deg, #5c7db8, #2e3e5f); font-size: 1.1rem; z-index: 999;">
+                    <small class="d-inline-block">
+                        <i class="bi bi-c-circle me-1 text-white"></i>
+                        2025 <span style="letter-spacing: 0.5px;">SIMAK – Kantor BKAD Kabupaten Dairi</span>
+                    </small>
+                </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
