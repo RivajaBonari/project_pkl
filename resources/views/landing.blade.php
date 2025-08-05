@@ -323,68 +323,71 @@
 
 
 
- <footer class="pt-5" style="background: linear-gradient(135deg, #445d8a, #1e2f4f); color: #f8f9fa;">
-    <div class="container pb-4">
-        <div class="row text-center text-md-start">
+    <footer class="pt-5" style="background: linear-gradient(135deg, #445d8a, #1e2f4f); color: #f8f9fa;">
+        <div class="container pb-4">
+            <div class="row text-center text-md-start">
 
-            <!-- Kolom 1: Kontak -->
-            <div class="col-md-4 mb-4">
-                <h5 class="fw-bold mb-3">Hubungi Kami</h5>
-                <ul class="list-unstyled">
-                    <li class="mb-2">
-                        <i class="bi bi-whatsapp me-2 text-success fs-5"></i>
-                        <a href="https://wa.me/628136464747" target="_blank" class="text-light text-decoration-none">
-                            +62 813-6464-747
-                        </a>
-                    </li>
-                    <li>
-                        <i class="bi bi-envelope-fill me-2 fs-5"></i>
-                        <a href="mailto:cthemail@kemendagri.go.id" class="text-light text-decoration-none">
-                            cthemail@kemendagri.go.id
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Kolom 2: Google Map -->
-            <div class="col-md-4 mb-4 text-center">
-                <h5 class="fw-bold mb-3">Lokasi Kami</h5>
-                <div class="rounded overflow-hidden shadow-sm border border-light">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.2320167454254!2d98.3115856735954!3d2.747477097229727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303037e159f9aba1%3A0x3bf718031e5ced86!2sBadan%20Keuangan%20dan%20Aset%20Daerah%20(BKAD)%20Kabupaten%20Dairi!5e0!3m2!1sid!2sid!4v1754293414849!5m2!1sid!2sid"
-                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <!-- Kolom 1: Kontak -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Hubungi Kami</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="bi bi-whatsapp me-2 text-success fs-5"></i>
+                            <a href="https://wa.me/628136464747" target="_blank"
+                                class="text-light text-decoration-none">
+                                +62 813-6464-747
+                            </a>
+                        </li>
+                        <li>
+                            <i class="bi bi-envelope-fill me-2 fs-5"></i>
+                            <a href="mailto:cthemail@kemendagri.go.id" class="text-light text-decoration-none">
+                                cthemail@kemendagri.go.id
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-            </div>
 
-            <!-- Kolom 3: Alamat dan Sosial Media -->
-            <div class="col-md-4 mb-4">
-                <h5 class="fw-bold mb-3">Alamat Kantor</h5>
-                <p style="font-size: 0.95rem;">
-                    Jl. Sisingamangaraja No.127<br>
-                    Sidikalang, Kab. Dairi, Sumatera Utara 22218
-                </p>
-                <div class="mt-3">
-                    <h6 class="fw-bold">Media Sosial</h6> 
-                    <a href="https://www.instagram.com/bkad_kabdairi/" target="_blank" class="me-3 text-light">
-                        <i class="bi bi-instagram fs-5 text-danger"></i>
-                    </a>
-                    <a href="https://www.facebook.com/profile.php?id=61576860890036" target="_blank" class="text-light">
-                        <i class="bi bi-facebook fs-5 text-primary"></i>
-                    </a>
+                <!-- Kolom 2: Google Map -->
+                <div class="col-md-4 mb-4 text-center">
+                    <h5 class="fw-bold mb-3">Lokasi Kami</h5>
+                    <div class="rounded overflow-hidden shadow-sm border border-light">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3985.2320167454254!2d98.3115856735954!3d2.747477097229727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303037e159f9aba1%3A0x3bf718031e5ced86!2sBadan%20Keuangan%20dan%20Aset%20Daerah%20(BKAD)%20Kabupaten%20Dairi!5e0!3m2!1sid!2sid!4v1754293414849!5m2!1sid!2sid"
+                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+
+                <!-- Kolom 3: Alamat dan Sosial Media -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="fw-bold mb-3">Alamat Kantor</h5>
+                    <p style="font-size: 0.95rem;">
+                        Jl. Sisingamangaraja No.127<br>
+                        Sidikalang, Kab. Dairi, Sumatera Utara 22218
+                    </p>
+                    <div class="mt-3">
+                        <h6 class="fw-bold">Media Sosial</h6>
+                        <a href="https://www.instagram.com/bkad_kabdairi/" target="_blank" class="me-3 text-light">
+                            <i class="bi bi-instagram fs-5 text-danger"></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=61576860890036" target="_blank"
+                            class="text-light">
+                            <i class="bi bi-facebook fs-5 text-primary"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Footer Bottom -->
-    <div class=" fixed-bottom text-center py-3 mt-2" style="background: linear-gradient(to right, #314e75, #1d2b47);">
-        <small class="text-white fw-semibold">
-            <i class="bi bi-c-circle me-1"></i>
-            2025 SIMAK Kantor BKAD Kabupaten Dairi
-        </small>
-    </div>
-</footer>
+        <!-- Footer Bottom -->
+        <div class=" fixed-bottom text-center py-3 mt-2"
+            style="background: linear-gradient(to right, #314e75, #1d2b47);">
+            <small class="text-white fw-semibold">
+                <i class="bi bi-c-circle me-1"></i>
+                2025 SIMAK Kantor BKAD Kabupaten Dairi
+            </small>
+        </div>
+    </footer>
 
 
 
