@@ -24,7 +24,6 @@
                                 <th>Asal</th>
                                 <th>Perihal</th>
                                 <th>Sifat</th>
-                                <th>Disposisi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -42,15 +41,6 @@
                                         {{ $surat->perihal }}
                                     </td>
                                     <td>{{ $surat->sifat ?? '-' }}</td>
-                                    <td>
-                                        @if ($surat->status_disposisi == 'Belum')
-                                            <label class="badge badge-warning">Belum</label>
-                                        @elseif($surat->status_disposisi == 'Didisposisikan')
-                                            <label class="badge badge-info">Didisposisikan</label>
-                                        @else
-                                            <label class="badge badge-success">Selesai</label>
-                                        @endif
-                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
