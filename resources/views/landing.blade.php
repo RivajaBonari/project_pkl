@@ -222,7 +222,7 @@
                         <div
                             style="position: absolute; top: -20px; left: -20px; width: 120%; height: 120%; border: 2px dashed #f1c40f; border-radius: 50%; animation: rotate 20s linear infinite;">
                         </div>
-                        <img src="{{ asset('assets/images/bkad1.webp') }}" alt="Ilustrasi Surat"
+                        <img src="{{ asset('assets/images/bg1.png') }}" alt="Ilustrasi Surat"
                             class="img-fluid rounded" style="max-height: 360px; position: relative; z-index: 2;">
                     </div>
                 </div>
